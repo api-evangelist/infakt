@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.infakt.pl/ + live probe of https://api.infakt.pl/api/v3/
+docs: https://docs.infakt.pl/
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+- name: inFaktApiKey
+  type: apiKey
+  in: header
+  parameter_name: X-inFakt-ApiKey
+  description: >-
+    Per-account API key generated in the inFakt web app. Sent on every request
+    in the X-inFakt-ApiKey header. A missing key returns HTTP 401 with body
+    {"error":"Musisz podac klucz API."}; an invalid key returns HTTP 401 with
+    {"error":"Klucz API ktory podales jest nieprawidlowy."}. inFakt provides a
+    separate Sandbox environment with its own test API key (see sandbox/).
+  evidence:
+  - 'GET https://api.infakt.pl/api/v3/clients.json without header -> 401 "Musisz podac klucz API."'
+  - 'GET .../clients.json with junk X-inFakt-ApiKey -> 401 "Klucz API ktory podales jest nieprawidlowy."'
+notes: >-
+  Key-auth only. inFakt does not expose OAuth2 or OpenID Connect
+  (/.well-known/openid-configuration and /oauth-authorization-server both 404),
+  so there is no OAuth scope surface for this provider.
