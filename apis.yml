@@ -1,25 +1,136 @@
 aid: infakt
 name: inFakt
-description: inFakt is a company surfaced as a portfolio company of point-nine and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  inFakt is a Polish fintech platform that combines invoicing software, online
+  accounting, and dedicated bookkeeper services for sole proprietors (JDG),
+  limited-liability companies (sp. z o.o.), foundations and other business types
+  operating in Poland. Used by over 460,000 companies and headquartered in
+  Kraków, inFakt offers a web app, iOS/Android mobile apps, deep KSeF (Poland's
+  National e-Invoice System) integration, and a REST API (v3, JSON) for
+  third-party integrations. The API exposes invoices, clients, products, costs,
+  bank accounts, VAT exemptions, payment methods and business-activity data so
+  e-commerce shops, CRMs and accounting tools can automate invoicing, cost
+  booking and tax compliance. inFakt also publishes a hosted MCP server so AI
+  agents can operate a company's accounting through Claude and other MCP clients.
 url: https://raw.githubusercontent.com/api-evangelist/infakt/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - point-nine
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-public-api-surface
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://www.infakt.pl/images/logo-infakt.png
 tags:
 - Company
-apis: []
+- Accounting
+- Invoicing
+- Fintech
+- Bookkeeping
+- e-Invoicing
+- KSeF
+- Tax
+- Poland
+- SMB
+apis:
+- name: inFakt API v3
+  description: >-
+    inFakt's REST API (v3) for automating invoicing and accounting. Resources
+    are addressed with a .json extension under /api/v3/ and authenticated with a
+    per-account API key sent in the X-inFakt-ApiKey header. Confirmed resources:
+    invoices, clients, products, costs, bank_accounts, vat_exemptions,
+    payment_methods and business_activities.
+  humanURL: https://docs.infakt.pl/
+  baseURL: https://api.infakt.pl/api/v3/
+  properties:
+  - type: Documentation
+    url: https://docs.infakt.pl/
+  - type: APIReference
+    url: https://docs.infakt.pl/
+  - type: Authentication
+    url: authentication/infakt-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: VulnerabilityDisclosure
+  url: security/infakt-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/infakt-domain-security.yml
 - type: Website
   url: https://www.infakt.pl
+- type: DeveloperPortal
+  url: https://www.infakt.pl/api/
+- type: Documentation
+  url: https://docs.infakt.pl/
+- type: APIReference
+  url: https://docs.infakt.pl/
+- type: GettingStarted
+  url: https://www.infakt.pl/integracje-z-infakt-za-pomoca-api/
+- type: Support
+  url: https://pomoc.infakt.pl/hc/pl
+- type: Blog
+  url: https://www.infakt.pl/blog/
+- type: Pricing
+  url: https://www.infakt.pl/cennik/
+- type: SignUp
+  url: https://konto.infakt.pl/rejestracja
+- type: Login
+  url: https://konto.infakt.pl/zaloguj
+- type: TermsOfService
+  url: https://www.infakt.pl/owu/
+- type: PrivacyPolicy
+  url: https://www.infakt.pl/polityka-prywatnosci/
+- type: StatusPage
+  url: https://status.infakt.pl/
+- type: Security
+  url: https://www.infakt.pl/bugbounty/
+- type: ChangeLog
+  url: https://www.infakt.pl/historia-zmian-w-aplikacji-infakt/
+- type: LLMsTxt
+  url: llms/infakt-llms.txt
+- type: WellKnown
+  url: well-known/infakt-well-known.yml
+- type: SecurityTxt
+  url: well-known/infakt-security.txt
+- type: MCPServer
+  url: mcp/infakt-mcp.yml
+- type: Authentication
+  url: authentication/infakt-authentication.yml
+- type: Conventions
+  url: conventions/infakt-conventions.yml
+- type: ErrorCatalog
+  url: errors/infakt-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/infakt-lifecycle.yml
+- type: Conformance
+  url: conformance/infakt-conformance.yml
+- type: DataModel
+  url: data-model/infakt-data-model.yml
+- type: Sandbox
+  url: sandbox/infakt-sandbox.yml
+- type: Webhooks
+  url: asyncapi/infakt-webhooks.yml
+- type: ChangeLog
+  url: changelog/infakt-changelog.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

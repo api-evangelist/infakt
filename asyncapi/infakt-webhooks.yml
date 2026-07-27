@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://docs.infakt.pl/ (Webhooks section) +
+  https://pomoc.infakt.pl/hc/pl/categories/24575052645522-Integracje-z-innymi-systemami
+spec_type: Webhooks
+webhooks:
+  supported: true
+  description: >-
+    inFakt documents Webhooks for real-time event notifications so integrations
+    are pushed changes (e.g. invoice events) rather than polling the API. The
+    webhook catalog is documented at docs.infakt.pl; no machine-readable
+    AsyncAPI document is published, so this artifact captures the webhook
+    surface only (type: Webhooks), not an AsyncAPI spec.
+  docs: https://docs.infakt.pl/
+  events:
+    note: >-
+      Individual event names are documented in the docs Webhooks section but are
+      not reproduced verbatim here (docs are a client-rendered SPA); the surface
+      centers on invoice and document lifecycle events.

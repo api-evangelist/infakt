@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://pomoc.infakt.pl/hc/pl/articles/34739827819410 (Srodowisko testowe API
+  - Sandbox)
+sandbox:
+  available: true
+  name: inFakt API Sandbox
+  docs: https://pomoc.infakt.pl/hc/pl/articles/34739827819410-%C5%9Arodowisko-testowe-API-Sandbox
+  separation: >-
+    inFakt provides a dedicated Sandbox (test) environment separate from the
+    live account, with its own test API key issued from the app. Requests are
+    authenticated with the same X-inFakt-ApiKey header against the test
+    environment so integrations can be validated without affecting real
+    accounting data.
+  test_values:
+    note: >-
+      No fixed magic test card/IBAN values are published; the sandbox works
+      against a test company created for the developer. Test values are not
+      fabricated here.

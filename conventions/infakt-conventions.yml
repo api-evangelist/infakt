@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: derived
+source: >-
+  live probes of https://api.infakt.pl/api/v3/ + https://docs.infakt.pl/ +
+  well-known/infakt-security.txt
+conventions:
+  protocol: REST + JSON
+  base_url: https://api.infakt.pl/api/v3/
+  resource_addressing: >-
+    Resources are addressed with an explicit .json extension, e.g.
+    /api/v3/invoices.json, /api/v3/clients.json. Requesting a resource without
+    the extension returns HTTP 406 Not Acceptable.
+  authentication:
+    style: api-key-header
+    header: X-inFakt-ApiKey
+    ref: authentication/infakt-authentication.yml
+  versioning:
+    scheme: uri-path
+    current: v3
+    ref: lifecycle/infakt-lifecycle.yml
+  error_envelope:
+    shape: 'JSON object with a single "error" string field'
+    example: '{"error":"Musisz podac klucz API."}'
+    ref: errors/infakt-problem-types.yml
+  idempotency:
+    supported: unknown
+    note: >-
+      inFakt does not publicly document an idempotency-key header or parameter;
+      no Idempotency pointer is emitted (not fabricated).
+  pagination:
+    style: unknown
+    note: >-
+      Pagination parameters are not confirmed from public probing; left
+      unasserted rather than fabricated.
+  webhooks:
+    supported: true
+    ref: asyncapi/infakt-webhooks.yml

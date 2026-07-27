@@ -1,0 +1,80 @@
+# inFakt
+
+> inFakt is a Polish fintech platform that combines invoicing software, online accounting, and bookkeeper services for sole proprietors (JDG), LLCs (sp. z o.o.), foundations, and other business types operating in Poland. Used by over 460,000 companies, inFakt offers a web app, mobile apps (iOS/Android), KSeF integration (Poland's National e-Invoice System), and a REST API for third-party integrations. Headquartered in Kraków, Poland.
+
+inFakt operates in the Polish market and all product interfaces, support, and most content are in Polish. The platform's core value proposition is simplifying accounting, invoicing, tax compliance, and KSeF e-invoicing for small and medium businesses in Poland. Key differentiator: combining an intuitive self-service app with access to dedicated personal accountants ("Księgowy z polecenia") vetted through a rigorous 3-stage recruitment process.
+
+## Pricing Plans
+
+- [Cennik (Pricing)](https://www.infakt.pl/cennik/): Full pricing overview for all plans
+- [inFakt KSeF – darmowy plan](https://www.infakt.pl/program-do-ksef/): Free plan for KSeF invoicing with unlimited documents
+- [inFakt Faktury](https://www.infakt.pl/program-do-fakturowania/): Invoicing plan from 4.99 PLN/month (annual billing), unlimited invoices, KSeF integration, all invoice types
+- [Samodzielna Księgowość](https://www.infakt.pl/program-do-ksiegowosci/): Self-service accounting plan with cost booking, OCR, JPK generation, VAT calculation
+- [inFakt Księgowość](https://www.infakt.pl/biuro-rachunkowe-online/): Full accounting service with a dedicated personal bookkeeper from 199 PLN/month
+- [inFakt Spółki](https://www.infakt.pl/ksiegowosc-dla-spolek/): Accounting for LLCs (sp. z o.o.) with a dedicated bookkeeper from 650 PLN/month
+
+## Core Features
+
+- [Aplikacja inFakt](https://www.infakt.pl/aplikacja-infakt/): Overview of the inFakt web and mobile application
+- [KSeF w inFakcie](https://www.infakt.pl/ksef/): KSeF (Krajowy System e-Faktur) integration – send and receive e-invoices, automatic cost download, free for all users
+- [Przenieś księgowość](https://www.infakt.pl/przenies-ksiegowosc/): Transfer your accounting to inFakt from another provider
+- [Zakładanie firmy z inFakt](https://www.infakt.pl/wygodne-zakladanie-firmy/): Free business registration service (JDG via CEIDG) with accountant guidance
+- [Załóż spółkę z o.o.](https://www.infakt.pl/wygodne-zakladanie-spolki/): LLC (sp. z o.o.) registration service with accountant support
+- [Księgowi inFaktu](https://www.infakt.pl/o-ksiegowych/): Information about inFakt's accountant team – only 5% of candidates pass recruitment
+- [Wyszukaj Księgowego](https://www.infakt.pl/ksiegowi/wyszukaj): Browse and select a personal bookkeeper
+- [Integracje z API](https://www.infakt.pl/integracje-z-infakt-za-pomoca-api/): Third-party integrations via API – e-commerce, CRM, project management
+- [Kalkulatory](https://www.infakt.pl/kalkulatory/): Tax and business calculators for Polish entrepreneurs
+
+## Supported Invoice Types
+
+inFakt supports: standard invoices (faktura), proforma, scheduled invoices, recurring invoices, advance invoices (zaliczkowa), corrective invoices (korygująca), settlement invoices (rozliczeniowa), margin invoices (marża), OSS invoices, internal invoices, and accounting notes (DW). Invoices can be issued in foreign currencies.
+
+## API & Developer Resources
+
+- [API Documentation](https://docs.infakt.pl/): Full REST API documentation for developers
+- [Integracje z API](https://www.infakt.pl/integracje-z-infakt-za-pomoca-api/): List of ready-made third-party integrations and how to submit your own
+- [API Help Articles](https://pomoc.infakt.pl/hc/pl/categories/24575052645522-Integracje-z-innymi-systemami): Help center section on API integration, webhooks, and API key management
+- [KSeF API Integration](https://pomoc.infakt.pl/hc/pl/articles/16167523183378-Pobieranie-faktur-z-KSeF-przez-API-inFakt): Downloading invoices from KSeF via inFakt API (supports JSON collections and single XML)
+
+## Help & Support
+
+- [Centrum Pomocy (Help Center)](https://pomoc.infakt.pl/hc/pl): Full help center with articles on all features
+- [Aplikacja online – przewodnik](https://pomoc.infakt.pl/hc/pl/articles/115000078570-Aplikacja-online): Comprehensive guide to the web application
+- [KSeF Help Articles](https://pomoc.infakt.pl/hc/pl/articles/31738734518546-inFakt-KSeF): Help articles about KSeF integration and usage
+- [Zakładanie firmy – pomoc](https://pomoc.infakt.pl/hc/pl/articles/115000012550-Zak%C5%82adanie-firmy-z-inFakt): Help article on starting a business with inFakt
+
+## Blog & Knowledge Base
+
+- [inFakt Blog](https://www.infakt.pl/blog/): Tax news, KSeF updates, accounting guides, business tips for Polish entrepreneurs
+- [KSeF 2.0 w inFakcie](https://www.infakt.pl/blog/ksef-2-0-juz-w-infakcie-szybka-i-wygodna-integracja/): KSeF 2.0 launch and integration guide
+- [Zakładanie działalności a KSeF](https://www.infakt.pl/blog/zakladanie-dzialalnosci-gospodarczej-a-ksef/): Starting a business in the KSeF era
+- [KSeF dla spółki z o.o.](https://www.infakt.pl/blog/ksef-dla-spolki-z-o-o-jak-przygotowac-sie-na-e-faktury/): KSeF for LLCs guide
+
+## Key Integrations
+
+- KSeF (Krajowy System e-Faktur) – Poland's National e-Invoice System
+- Bank account connectivity via AIS/PSD2 (licensed AISP by KNF), including Santander Bank integration
+- E-commerce: WooCommerce, Shoper, Shoplo, Sky-Shop, BaseLinker, Apilo, TrisoSHOP, Sellasist, PartsManager
+- Project management: Centrium, Mantreo
+- Financial services: PragmaGO (installment payments), debt collection (windykacja)
+- JPK (Jednolity Plik Kontrolny) generation and submission to tax authorities
+- VAT-UE declarations
+
+## Contact & Access
+
+- Website: https://www.infakt.pl/
+- Login: https://konto.infakt.pl/zaloguj/
+- Accountant panel: https://panel-ksiegowego.infakt.pl/zaloguj
+- Registration: https://konto.infakt.pl/rejestracja
+- Contact page: https://www.infakt.pl/kontakt/
+- Phone support: 22 307 19 18 (Mon–Sat 7:00–22:00)
+- KSeF Hotline: +48 22 123 10 80 (Mon–Sat 7:00–22:00, Sun 10:00–18:00)
+- Email: info@infakt.pl
+- Mobile apps: [iOS App Store](https://apps.apple.com/pl/app/infakt-faktury-i-ksi%C4%99gowo%C5%9B%C4%87/id875266244) | [Google Play](https://play.google.com/store/apps/details?id=pl.infakt.infakt)
+
+## Optional
+
+- [Facebook](https://www.facebook.com/infakt/): Social media presence and community
+- [inFolinia KSeF](https://www.infakt.pl/infolinia-ksef/): Free KSeF helpline page with contact details
+- [Poradniki wideo](https://www.youtube.com/c/infakt/videos): Video guides and tutorials on YouTube
+- [Wzory dokumentów](https://www.infakt.pl/blog/kategoria/formularze/): Document templates and form guides

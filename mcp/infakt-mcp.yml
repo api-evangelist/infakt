@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://infakt.ai/
+server:
+  name: inFakt MCP
+  landing: https://infakt.ai/
+  setup: https://app.infakt.pl/app/ustawienia/inne_opcje/mcp
+  transport: http
+  authentication: >-
+    Connected from the inFakt web app (Settings -> Other options -> MCP). The
+    account's inFakt API key authorizes the MCP session; each user connects
+    their own company's data.
+notes: >-
+  inFakt publishes a hosted MCP (Model Context Protocol) server, presented in
+  partnership with Anthropic (Claude), that lets AI agents operate a company's
+  invoicing and accounting through the inFakt API v3. The MCP surface mirrors
+  the REST API resources (invoices, clients, products, costs, bank accounts).
+  The exact tool list and remote endpoint URL are provisioned per account from
+  the in-app MCP settings and are not published as a static manifest; tools
+  below are the derived REST-resource mapping, not a verbatim tool catalog.
+tools:
+- name: list_invoices
+  description: List invoices for the connected company
+  source_resource: /api/v3/invoices.json
+- name: create_invoice
+  description: Create a new invoice
+  source_resource: /api/v3/invoices.json
+- name: list_clients
+  description: List clients
+  source_resource: /api/v3/clients.json
+- name: list_products
+  description: List products
+  source_resource: /api/v3/products.json
+- name: list_costs
+  description: List costs (expenses)
+  source_resource: /api/v3/costs.json

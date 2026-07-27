@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: derived
+source: live probes of https://api.infakt.pl/api/v3/
+format: custom-json
+envelope:
+  field: error
+  description: 'Errors return a JSON object with a single "error" string (human-readable, Polish).'
+  content_type: application/json
+  note: >-
+    inFakt does not use RFC 9457 application/problem+json; the envelope is a
+    flat {"error": "..."} object. Statuses below were observed from
+    unauthenticated / malformed live requests.
+problems:
+- status: 401
+  observed_message: Musisz podac klucz API.
+  meaning: API key missing
+  remediation: Send a valid key in the X-inFakt-ApiKey header.
+- status: 401
+  observed_message: Klucz API ktory podales jest nieprawidlowy.
+  meaning: API key invalid
+  remediation: Verify the API key from the inFakt app settings (or use the Sandbox test key).
+- status: 403
+  meaning: Forbidden (resource requires a plan/permission the account lacks, e.g. costs, payment_methods)
+- status: 404
+  meaning: Resource path not found
+- status: 406
+  meaning: Not Acceptable (resource requested without the required .json extension)

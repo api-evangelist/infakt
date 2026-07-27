@@ -1,0 +1,13 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.infakt.pl/historia-zmian-w-aplikacji-infakt/
+scheme: dated-product-changelog
+url: https://www.infakt.pl/historia-zmian-w-aplikacji-infakt/
+note: >-
+  inFakt publishes a dated "Historia zmian w aplikacji" (application change
+  history) covering product and app updates, including KSeF and API-relevant
+  changes. Recent entries are not reproduced verbatim (page is a
+  client-rendered SPA); the live page is the source of truth. A notable recent
+  milestone is the KSeF 2.0 integration launch
+  (https://www.infakt.pl/blog/ksef-2-0-juz-w-infakcie-szybka-i-wygodna-integracja/).
+entries: []

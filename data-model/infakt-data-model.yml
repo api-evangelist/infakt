@@ -1,0 +1,47 @@
+generated: '2026-07-19'
+method: derived
+source: >-
+  live resource probing of https://api.infakt.pl/api/v3/ (401/403 = resource
+  exists and requires auth; 404 = absent) + https://docs.infakt.pl/
+note: >-
+  Entities confirmed present by probing each /api/v3/<resource>.json endpoint.
+  Relationships are limited to the ones inFakt's invoicing model universally
+  documents; fields not confirmed from the public surface are not asserted.
+entities:
+- name: invoice
+  resource: /api/v3/invoices.json
+  confirmed: true
+- name: client
+  resource: /api/v3/clients.json
+  confirmed: true
+- name: product
+  resource: /api/v3/products.json
+  confirmed: true
+- name: cost
+  resource: /api/v3/costs.json
+  confirmed: true
+  note: expenses; returned 403 for the probed (unauthorized) account
+- name: bank_account
+  resource: /api/v3/bank_accounts.json
+  confirmed: true
+- name: vat_exemption
+  resource: /api/v3/vat_exemptions.json
+  confirmed: true
+- name: payment_method
+  resource: /api/v3/payment_methods.json
+  confirmed: true
+  note: returned 403 for the probed (unauthorized) account
+- name: business_activity
+  resource: /api/v3/business_activities.json
+  confirmed: true
+relationships:
+- from: invoice
+  to: client
+  kind: belongs_to
+  via: client_id
+  note: an invoice is issued to a client
+- from: invoice
+  to: product
+  kind: has_many
+  via: services/line-items
+  note: invoice line items reference the product catalog

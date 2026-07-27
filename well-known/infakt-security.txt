@@ -1,0 +1,8 @@
+Canonical: https://www.infakt.pl/.well-known/security.txt
+Contact: mailto:bugbounty@infakt.pl
+Contact: tel:+48223071918
+Encryption: https://www.infakt.pl/.well-known/bugbounty.asc
+Expires: 2099-12-31T11:59:00Z
+Hiring: https://www.infakt.pl/kariera/
+Policy: https://www.infakt.pl/bugbounty/
+Preferred-Languages: pl, en
