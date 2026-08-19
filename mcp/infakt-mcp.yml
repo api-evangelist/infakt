@@ -7,18 +7,14 @@ server:
   landing: https://infakt.ai/
   setup: https://app.infakt.pl/app/ustawienia/inne_opcje/mcp
   transport: http
-  authentication: >-
-    Connected from the inFakt web app (Settings -> Other options -> MCP). The
-    account's inFakt API key authorizes the MCP session; each user connects
-    their own company's data.
-notes: >-
-  inFakt publishes a hosted MCP (Model Context Protocol) server, presented in
-  partnership with Anthropic (Claude), that lets AI agents operate a company's
-  invoicing and accounting through the inFakt API v3. The MCP surface mirrors
-  the REST API resources (invoices, clients, products, costs, bank accounts).
-  The exact tool list and remote endpoint URL are provisioned per account from
-  the in-app MCP settings and are not published as a static manifest; tools
-  below are the derived REST-resource mapping, not a verbatim tool catalog.
+  authentication: Connected from the inFakt web app (Settings -> Other options -> MCP). The account's
+    inFakt API key authorizes the MCP session; each user connects their own company's data.
+notes: inFakt publishes a hosted MCP (Model Context Protocol) server, presented in partnership with Anthropic
+  (Claude), that lets AI agents operate a company's invoicing and accounting through the inFakt API v3.
+  The MCP surface mirrors the REST API resources (invoices, clients, products, costs, bank accounts).
+  The exact tool list and remote endpoint URL are provisioned per account from the in-app MCP settings
+  and are not published as a static manifest; tools below are the derived REST-resource mapping, not a
+  verbatim tool catalog.
 tools:
 - name: list_invoices
   description: List invoices for the connected company
@@ -35,3 +31,12 @@ tools:
 - name: list_costs
   description: List costs (expenses)
   source_resource: /api/v3/costs.json
+deployment:
+  mode: none
+  endpoint: https://app.infakt.pl/app/ustawienia/inne_opcje/mcp
+  verified: probed
+  probe: dead
+  note: the endpoint this manifest claimed did not answer; recorded as none rather than deleted so the
+    claim stays auditable
+  checked: '2026-08-12'
+  source: catalog MCP census
